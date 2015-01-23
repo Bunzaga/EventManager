@@ -1,6 +1,6 @@
 // requires the NodeList object: https://bunzaga.github.io/Goo-Scripts/NodeList.js
 "use strict";
-define('EventManager', ['../Goo-Scripts/NodeList'],function(NodeList){
+define(['../Goo-Scripts/NodeList'],function(NodeList){
 	console.log('test from EventManager');
 	console.log(NodeList);
 	var EventManager = {};
@@ -59,5 +59,5 @@ define('EventManager', ['../Goo-Scripts/NodeList'],function(NodeList){
 			EventManager.off(i);
 		}
 	};
-  return EventManager;
+	return EventManager;
 });
