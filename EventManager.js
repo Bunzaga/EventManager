@@ -61,5 +61,6 @@ require([
 			EventManager.off(i);
 		}
 	};
-	return EventManager;	
+	var global = global || window;
+	global.EventManager = global.EventManager || EventManager;
 });
