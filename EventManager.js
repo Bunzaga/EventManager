@@ -1,10 +1,8 @@
 // requires the NodeList object: https://bunzaga.github.io/Goo-Scripts/NodeList.js
 "use strict"; 
-require(['https://bunzaga.github.io/NodeList/NodeList.js'],
-function(NodeList){
-define([
+require([
 	'https://bunzaga.github.io/NodeList/NodeList.js'
-], function(
+],function(
 	NodeList
 ){
 	var EventManager = {};
@@ -64,4 +62,4 @@ define([
 		}
 	};
 	return EventManager;	
-});});
+});
