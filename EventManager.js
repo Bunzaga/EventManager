@@ -5,6 +5,8 @@ require([
 ],function(
 	NodeList
 ){
+	window.NodeList = window.NodeList || NodeList;
+	define(['https://bunzaga.github.io/NodeList/NodeList.js'], function(NodeList){
 	var EventManager = {};
 	var eventList = {};
 	EventManager.on = function(e, callback, priority){
@@ -61,6 +63,5 @@ require([
 			EventManager.off(i);
 		}
 	};
-	var global = global || window;
-	global.EventManager = global.EventManager || EventManager;
+	});
 });
