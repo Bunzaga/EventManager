@@ -1,8 +1,7 @@
 // requires the NodeList object: https://bunzaga.github.io/Goo-Scripts/NodeList.js
 "use strict"; 
-define(function (require) {
-    var NodeList = require('https://bunzaga.github.io/NodeList/NodeList.js');
-    window.NodeList = window.NodeList || NodeList;
+define(['https://bunzaga.github.io/NodeList/NodeList.js'],
+function(NodeList){
 	var EventManager = {};
 	var eventList = {};
 	EventManager.on = function(e, callback, priority){
