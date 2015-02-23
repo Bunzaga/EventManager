@@ -1,7 +1,6 @@
-// requires the NodeList object: https://bunzaga.github.io/Goo-Scripts/NodeList.js
+// requires the LinkedList object: https://bunzaga.github.io/LinkedList/LinkedList.js
 "use strict"; 
-define(['https://bunzaga.github.io/NodeList/NodeList.js'],
-function(NodeList){
+(function(window, undefined){
 	var EventManager = {};
 	var eventList = {};
 	EventManager.on = function(e, callback, priority){
@@ -58,5 +57,6 @@ function(NodeList){
 			EventManager.off(i);
 		}
 	};
-	return EventManager;
-});
+	
+	window.EventManager = EventManager;
+}(window));
