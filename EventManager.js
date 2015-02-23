@@ -5,7 +5,7 @@
 	var eventList = {};
 	EventManager.on = function(e, callback, priority){
 		if(undefined === eventList[e]){
-			eventList[e] = new NodeList();
+			eventList[e] = new LinkedList();
 		}
 		var node = {previous:null, next:null, callback:callback};
 		if(undefined === priority){
@@ -56,7 +56,7 @@
 		for(var i in eventList){
 			EventManager.off(i);
 		}
+		return EventManager;
 	};
-	
 	window.EventManager = EventManager;
 }(window));
